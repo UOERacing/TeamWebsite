@@ -459,7 +459,8 @@ body {
     font-family: 'Merriweather', 'Helvetica Neue', Arial, sans-serif;
 }
 hr {
-    border: 3px #F05F40;
+    border-color: #F05F40;
+    border-width: 3px;
     max-width: 50px;
 }
 hr.light {
@@ -600,7 +601,8 @@ header {
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
-    background: url('../img/header.jpg') center;
+    background-position: center;
+    background-image: url('../img/header.jpg');
     text-align: center;
     color: white;
 }
