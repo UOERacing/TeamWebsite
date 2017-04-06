@@ -86,7 +86,7 @@ header, header .header-content {
 
     /*Text color for left side buttons of navbar*/
     .navbar-default .navbar-header .navbar-brand {
-        color: black;
+        color: dimgrey;
     }
 
     /*Text color for hovered left side buttons of navbar*/
@@ -112,7 +112,7 @@ header, header .header-content {
 
     /*Text color for left side buttons of default navbar*/
     .navbar-default.affix .navbar-header .navbar-brand {
-        color: #F05F40;
+        color: dimgray;
         font-size: 14px
     }
 
@@ -259,7 +259,7 @@ p {
 }
 
 .bg-primary {
-    background-color: #F05F40;
+    background-color: dimgray;
 }
 
 .bg-dark {
@@ -433,3 +433,42 @@ fieldset[disabled] .btn-primary:focus, .btn-primary.disabled.focus, .btn-primary
     z-index: 10;
     width: auto;
 }
+
+/* Team Page START */
+.hierarchy {
+    display: inline-block;
+    position: relative;
+    user-select: none;
+    height: auto;
+    box-sizing: border-box;
+    margin: 0  2.5% 3% 2.5%;
+    z-index: -1;
+}
+
+.hierarchy:hover {
+
+}
+
+.hierarchy img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+.name {
+    text-align: center;
+    white-space: nowrap;
+    font-size: large;
+    font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+}
+
+.title {
+    margin-top: 10px;
+    font-weight: bold;
+    text-align: center;
+    white-space: nowrap;
+    font-size: 20px;
+    font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Team Page END */
