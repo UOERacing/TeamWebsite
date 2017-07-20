@@ -3,7 +3,7 @@
 
 body {
     background: #2f4e62;
-    color: #ffffff;
+    color: white;
     margin-left: 10%;
     margin-right: 10%;
     margin-bottom: 5%;
@@ -19,7 +19,7 @@ input[type=text] {
     outline: 0;
     background: transparent;
     border-bottom: 1px solid #FFFFFF;
-    color: #FFFFFF;
+    color: white;
     width: 40%;
 }
 /*input[type='checkbox'] {
@@ -41,4 +41,21 @@ input[type=submit] {
 }
 input[type=submit]:hover {
     opacity: 1;
+}
+
+select {
+    border: none;
+    font-family: "Source Sans Pro", Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    color: white;
+    background: transparent;
+    line-height: 1.65;
+    outline: none;
+    padding: 0 1% 1% 0;
+    border-bottom: 1px solid #FFFFFF;
+}
+
+select option {
+    color: black;
 }
