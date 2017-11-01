@@ -2,24 +2,12 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway:200,700|Source+Sans+Pro:300,600,300italic,600italic");
 
 /* Reset */
-	.vertical .leftpic {
-    	left: 0;
-    	text-align: center;
-    	width: 15%;
-    	margin: auto;
-	}
-	.vertical .rightpic {
-		right: 0;
-    	text-align: center;
-    	margin: auto;
-    	width: 250px;
-	}
-
-	.horizontal-pics {
-    	left: 0;
-    	right: 0;
-    	text-align: center;
-    	margin: auto;
+	.gallery-small img {
+  		float: left;
+  		opacity: 0.6;
+  		width: 50%;
+  		z-index: 111;
+  		padding-right: 2.5%;
 	}
 
 
