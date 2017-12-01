@@ -26,6 +26,11 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     padding-right: 5%;
 }
 
+.silver-sponsor {
+    float: left;
+    padding-right: 5%;
+}
+
 article, aside, details, figcaption, figure, footer, header, menu, nav, section {
     display: block;
 }
