@@ -16,9 +16,18 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     padding-left: 35%;
 }
 
+a:hover {
+    text-decoration: none
+}
+
+a {
+    text-decoration: none
+}
+
 .plat-sponsor {
-    width: 50%;
+    width: 45%;
     padding-bottom: 5%;
+    padding-left: 2%;
 }
 
 .gold-sponsor {
