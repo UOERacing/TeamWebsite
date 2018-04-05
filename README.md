@@ -1,2 +1,2 @@
-# website_updates
-All updates for the UOE Racing website until ready to be displayed
+# UOE Racing Website
+The website for the University of Ottawa's Electric Racing Team.
