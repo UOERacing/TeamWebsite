@@ -1,3 +1,2 @@
-# www.uoeracing.com
-
-Website for University of Ottawa's Electric Car Racing Team
+# website_updates
+All updates for the UOE Racing website until ready to be displayed

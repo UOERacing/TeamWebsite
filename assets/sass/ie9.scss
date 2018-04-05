@@ -4,103 +4,68 @@
 @import 'libs/skel';
 
 /*
-	Solid State by Pixelarity
+	Formula by Pixelarity
 	pixelarity.com | hello@pixelarity.com
 	License: pixelarity.com/license
 */
 
-/* Basic */
+/* Spotlight */
 
-	body {
-		background-color:		_palette(bg);
-		background-image:		url('../../images/cover.jpg');
-		background-size:		cover;
-		background-attachment:	fixed;
-		background-position:	center;
-
-		&:before {
-			background: transparentize(_palette(bg), 0.2);
+	.spotlight {
+		&:after {
 			content: '';
 			display: block;
-			height: 100%;
-			left: 0;
-			position: fixed;
-			top: 0;
-			width: 100%;
+			clear: both;
 		}
 
-		> * {
-			position: relative;
-			z-index: 1;
+		.content {
+			float: left;
+			width: 60%;
+		}
+
+		.image {
+			float: left;
+			margin-right: 0 !important;
+			margin-left: (_size(element-margin) * 2) !important;
 		}
 	}
 
 /* Features */
 
 	.features {
-		article {
-			display: inline-block;
-			width: 45%;
+		&:after {
+			content: '';
+			display: block;
+			clear: both;
+		}
+
+		> * {
+			float: left;
 		}
 	}
 
-/* Menu */
+/* Header */
 
-	#menu {
-		.inner {
-			margin: 4em auto;
+	#header {
+		.logo {
+			position: absolute;
+			top: 0;
+			left: 1.5em;
 		}
-	}
 
-/* Wrapper */
-
-	#wrapper {
-		> header {
-			background: none !important;
-		}
-	}
-
-	.wrapper {
-		&.spotlight {
-			.inner {
-				text-align: left !important;
-			}
-
-			.image {
-				display: inline-block;
-				margin: 0 _size(section-spacing, large) _size(element-margin) 0 !important;
-				vertical-align: middle;
-				width: 24%;
-			}
-
-			.content {
-				display: inline-block;
-				vertical-align: middle;
-				width: 70%;
-			}
+		nav {
+			position: absolute;
+			top: 0;
+			right: 0;
 		}
 	}
 
 /* Banner */
 
 	#banner {
-		background: none !important;
-	}
+		min-height: 0;
 
-/* Footer */
-
-	#footer {
-		background: none !important;
-
-		.inner {
-			form {
-				display: inline-block;
-				width: 45%;
-			}
-
-			.contact {
-				display: inline-block;
-				width: 45%;
-			}
+		.more {
+			display: none;
 		}
 	}

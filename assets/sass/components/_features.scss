@@ -1,5 +1,5 @@
 ///
-/// Solid State by Pixelarity
+/// Formula by Pixelarity
 /// pixelarity.com | hello@pixelarity.com
 /// License: pixelarity.com/license
 ///
@@ -9,63 +9,90 @@
 	.features {
 		@include vendor('display', 'flex');
 		@include vendor('flex-wrap', 'wrap');
-		margin: 0 0 _size(element-margin) 0;
+		border: solid 2px;
+		border-radius: _size(border-radius);
+		margin: (_size(element-margin) * 1.75) 0 (_size(element-margin) * 1.75) 0;
 
-		article {
-			@include padding(1.75em, 1.75em);
-			background-color: desaturate(lighten(_palette(bg), 3), 1.5);
-			border-radius: _size(border-radius);
-			margin: (_size(section-spacing, large) * 0.5) _size(section-spacing, large) (_size(section-spacing, large) * 0.5) 0;
-			width: calc(50% - #{_size(section-spacing, large) * 0.5});
+		> * {
+			@include padding(4em, 4em);
+			border-left: solid 2px;
+			border-top: solid 2px;
+			width: 50%;
 
-			&:nth-child(2n) {
-				margin-right: 0;
+			.icon {
+				@include vendor('transition', (
+					'transform #{_duration(features)} ease',
+					'opacity #{_duration(features)} ease'
+				));
 			}
+		}
 
-			.image {
-				border-radius: _size(border-radius) _size(border-radius) 0 0;
-				display: block;
-				margin-bottom: 1.75em;
-				margin-left: -1.75em;
-				margin-top: -1.75em;
-				position: relative;
-				width: calc(100% + #{3.5em});
+		> :nth-child(1) {
+			border-top-width: 0;
+		}
 
-				img {
-					border-radius: _size(border-radius) _size(border-radius) 0 0;
-					width: 100%;
+		> :nth-child(2) {
+			border-top-width: 0;
+		}
+
+		> :nth-child(2n - 1) {
+			border-left-width: 0;
+		}
+
+		@for $i from 1 through _misc(max-features) {
+			> :nth-child(#{$i}) {
+				.icon {
+					@include vendor('transition-delay', '#{(_duration(transition) * 0.75 * $i)}');
+				}
+			}
+		}
+
+		&.inactive {
+			> * {
+				.icon {
+					@include vendor('transform', 'scale(0.9) rotate(45deg)');
+					opacity: 0;
 				}
 			}
 		}
 
 		@include breakpoint(medium) {
-			article {
-				margin: (_size(section-spacing, medium) * 0.5) _size(section-spacing, medium) (_size(section-spacing, medium) * 0.5) 0;
-				width: calc(50% - #{_size(section-spacing, medium) * 0.5});
+			> * {
+				@include padding(4em, 2em);
 			}
 		}
 
 		@include breakpoint(small) {
-			article {
-				@include padding(1.5em, 1.5em);
-				margin: (_size(section-spacing, small) * 0.5) _size(section-spacing, small) (_size(section-spacing, small) * 0.5) 0;
-				width: calc(50% - #{_size(section-spacing, small) * 0.5} - 1px);
+			margin: _size(element-margin) 0 _size(element-margin) 0;
 
-				.image {
-					margin-bottom: 1.5em;
-					margin-left: -1.5em;
-					margin-top: -1.5em;
-					width: calc(100% + #{3em});
-				}
+			> * {
+				@include padding(2em, 1em);
 			}
 		}
 
 		@include breakpoint(xsmall) {
-			display: block;
+			@include vendor('flex-direction', 'column');
+			@include vendor('flex-wrap', 'nowrap');
 
-			article {
+			> * {
 				width: 100%;
-				margin: 0 0 _size(element-margin) 0 !important;
+				border-left-width: 0;
+			}
+
+			> :nth-child(2) {
+				border-top-width: 2px;
 			}
 		}
 	}
+
+	@mixin color-features($p: null) {
+		.features {
+			border-color: _palette($p, border);
+
+			> * {
+				border-color: _palette($p, border);
+			}
+		}
+	}
+
+	@include color-features;
