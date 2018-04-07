@@ -3704,3 +3704,12 @@
 		min-height: 100vh;
 		opacity: 1;
 	}
+
+#six a{
+	text-decoration: none !important;
+	border:0px !important;
+	outline:none;
+	border-width: 0px;
+	outline-width:0px;
+	border-bottom: none;
+}
