@@ -24,10 +24,13 @@
 }
 
 .picture {
+  /* These are all set to override defaults. */
   width: 175px;
   max-width: 175px;
+  min-width: 175px;
   height: 175px;
   max-height: 175px;
+  min-height: 175px;
   background: #eee;
   text-align: center;
 }
